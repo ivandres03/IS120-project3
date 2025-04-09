@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/981336eb75.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header -->
     <nav>
-        <div class="nav-logo">SkyVoyage</div>
-        <button class="go-home">Home</button>
-        <button class="Compare-Airlines">Compare Airlines</button>
+      <div class="nav-logo">SkyVoyage</div>
+      <button class="go-home">Home</button>
+      <button class="Compare-Airlines">Compare Airlines</button>
     </nav>
 
+    <!-- Banner -->
     <section>
-        <h1>Compare Airlines</h1>
-        <h3>Find the perfect airline for your journey by comparing amenities, routes, and service quality.</h3>
+      <h1>Compare Airlines</h1>
+      <h3>
+        Find the perfect airline for your journey by comparing amenities,
+        routes, and service quality.
+      </h3>
     </section>
 
+    <!-- compare section has to have no height and then you append` -->
+    <section id="Compare-section"></section>
+
+    <!-- search bar -->
     <section>
-        <div>searchbar here </div>
-        <div>grid with flights</div>
+      <div>searchbar here</div>
     </section>
-</body>
+
+    <!-- grid section -->
+    <section id="airline-grid">
+      <div id="flights-grid"></div>
+      <!-- give each div a checkbox and then if two checkboxes are checked disable all checkboxes that are .checked=false until clear selection is hit -->
+    </section>
+    <script src="./main.js"></script>
+  </body>
 </html>

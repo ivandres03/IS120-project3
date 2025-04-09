@@ -1,175 +1,210 @@
 :root {
-    --main-color: #1f80ff;
-    --secondary-color: #2252cd;
-    --third-color:#e3eeff;;
-    --light-gray:#717171;
-    --background-color: #ffff;
-    --footer-color: #1c2c34;
-    --fount-color: black;
+  --main-color: #1f80ff;
+  --secondary-color: #2252cd;
+  --third-color: #e3eeff;
+  --light-gray: #717171;
+  --background-color: #ffff;
+  --footer-color: #1c2c34;
+  --fount-color: black;
 }
-
 
 /*These are the styles for the nav*/
 nav {
-    width: 100%;
-    height: 45px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    color: var(--main-color);
-    padding: 0.3rem;
-  }
-  
-  .nav-logo {
-    font-weight: bold;
-    font-size: 2rem;
+  width: 100%;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  padding: 0.3rem;
+}
 
-  }
-  
-  .nav-buttons {
-    margin-left: auto;
-    display: flex;
-    margin-right: 15vw;
-  }
-  
-  .home-Btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-  }
-  
-  .home-Btn:hover {
-    background-color: #ff9500;
-    border-radius: 10px;
-  }
-  
-  .airlines-Btn {
-    background-color: var(--main-color);
-    border: none;
-    border-radius: 10px;
-    color: var(--background-color);
-    cursor: pointer;
-    padding: 1rem 1rem;
-    font-size: 1rem;
-  }
+.nav-logo {
+  font-weight: bold;
+  font-size: 2rem;
+}
 
-  .airlines-Btn:hover{
-    background-color: var(--secondary-color);
-  }
-  
+.nav-buttons {
+  margin-left: auto;
+  display: flex;
+  margin-right: 15vw;
+}
+
+.home-Btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+
+.home-Btn:hover {
+  background-color: #ff9500;
+  border-radius: 10px;
+}
+
+.airlines-Btn {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--background-color);
+  cursor: pointer;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+}
+
+.airlines-Btn:hover {
+  background-color: var(--secondary-color);
+}
+
 /*These are the styles for the light-blue section with the big logo*/
 
-main{
-    background-color: var(--third-color);
-    display: flex;
+main {
+  background-color: var(--third-color);
+  display: flex;
 }
 
-.title{
-    width: 50%;
-    padding: 2rem;
+.title {
+  width: 50%;
+  padding: 2rem;
 }
 
-p{
-    color: var(--light-gray);
+p {
+  color: var(--light-gray);
 }
 
-.big-logo{
-    width: 50%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    padding: 2rem;
+.big-logo {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.plane-bg{
-    background-color: var(--background-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
+.plane-bg {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
 }
 
-#plane{
-    font-size: 7rem;
-    color: var(--main-color);
-    transform: rotate(-45deg);
+#plane {
+  font-size: 7rem;
+  color: var(--main-color);
+  transform: rotate(-45deg);
 }
-
 
 /**/
-.boxes-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.boxes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.boxes{
-    display: flex;
-    flex-direction: row;
-    padding: 3rem; 
+.boxes {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
 }
 
-.box{
-    background-color: var(--third-color);
-    border-radius: 10px;
-    justify-items: center;
-    padding: 1rem;
-    margin: 1rem;
+.box {
+  background-color: var(--third-color);
+  border-radius: 10px;
+  justify-items: center;
+  padding: 1rem;
+  margin: 1rem;
 }
 
-.box div{
-    background-color: var(--main-color);
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
+.box div {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
-
-
-
-
-
-
-
 
 /*this is the section before the footer*/
-.divider{
-    background-color: var(--main-color);
-    color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-} 
-
-.divider p{
-    color: var(--background-color);
-} 
-
-.divider button{
-    background-color: var(--background-color);
-    border: none;
-    cursor: pointer;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 10px;
+.divider {
+  background-color: var(--main-color);
+  color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
+.divider p {
+  color: var(--background-color);
+}
+
+.divider button {
+  background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+}
 
 /*Styles for footer*/
-footer{
-    background-color: var(--footer-color);
-    color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+footer {
+  background-color: var(--footer-color);
+  color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-footer p{
-    color: var(--background-color);
+footer p {
+  color: var(--background-color);
+}
 
-} 
+#Compare-section {
+  display: none;
+}
+
+#airline-grid {
+  display: flex;
+  justify-content: center;
+}
+
+#flights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  width: 95%;
+}
+
+/* gridDiv */
+.airline-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  border: solid black 2px;
+  background-color: rgba(173, 216, 230, 0.2);
+  border-radius: 10%;
+}
+
+.airline-grid-item img {
+  width: 50%;
+  height: auto;
+}
+
+/* gridDivHeader */
+.grid-header {
+  font-weight: 700;
+  font-size: larger;
+  padding: 0.2rem;
+}
+
+/* gridDivImgContainer */
+.image-container {
+}
+
+/* gridDivSubtitle & gridDivPtag */
+.grid-text {
+}
