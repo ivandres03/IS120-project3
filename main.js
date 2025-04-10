@@ -51,8 +51,6 @@ function taskOne(dataObject) {
     let containerDiv = document.getElementById("flights-grid");
     containerDiv.appendChild(gridDiv);
 
-    // IMPORTANT: temporarily remove eventListener from here
-    // (we'll move that into taskTwo instead)
   }
 }
 
@@ -107,37 +105,40 @@ function taskTwo() {
 
 
 function updateCompareSection() {
-  const compareSection = document.getElementById("compare-section");
-  compareSection.innerHTML = ""; // Clear previous comparison content
+  let compareSection = document.getElementById("compare-section");
+  let compareSectionContainer = document.getElementById("compare-container");
+  compareSection.innerHTML = ""; 
 
   // If no airlines selected, hide the section
   if (selectedAirlines.length === 0) {
     compareSection.style.display = "none";
+    compareSectionContainer.style.display = "none";
     return;
   } else {
-    compareSection.style.display = "block"; // show it
+    compareSection.style.display = "block"; 
+    compareSectionContainer.style.display = "block"; 
   }
 
   // Build the table dynamically
-  const table = document.createElement("table");
+  let table = document.createElement("table");
   table.classList.add("table");
 
-  const thead = document.createElement("thead");
-  const headRow = document.createElement("tr");
-  headRow.appendChild(document.createElement("th")); // Empty top-left corner
+  let thead = document.createElement("thead");
+  let headRow = document.createElement("tr");
+  headRow.appendChild(document.createElement("th")); 
 
   selectedAirlines.forEach((name) => {
-    const th = document.createElement("th");
+    let th = document.createElement("th");
     th.textContent = name;
     headRow.appendChild(th);
   });
   thead.appendChild(headRow);
   table.appendChild(thead);
 
-  const tbody = document.createElement("tbody");
+  let tbody = document.createElement("tbody");
 
   // This came from AI helping me be more efficient
-  const features = [
+  let features = [
     { label: "Logo", key: "logo", isImage: true },
     { label: "Country", key: "country" },
     { label: "Destinations", key: "destinations" },
@@ -157,25 +158,26 @@ function updateCompareSection() {
       key: "recent_performance.on_time_percentage",
     },
   ];
+  //stop AI help
 
   // create airline rows for each feature
   features.forEach((feature) => {
-    const row = document.createElement("tr");
+    let row = document.createElement("tr");
 
     // add label in each cell of row
-    const featureCell = document.createElement("td");
+    let featureCell = document.createElement("td");
     featureCell.textContent = feature.label;
     row.appendChild(featureCell);
 
     // find data for each row 
     selectedAirlines.forEach((name) => {
-      const airline = allAirlinesData.find((a) => a.name === name); 
-      const cell = document.createElement("td");
+      let airline = allAirlinesData.find((a) => a.name === name); 
+      let cell = document.createElement("td");
 
       // AI Helped to adjust for if it was an image
       if (airline) {
         if (feature.isImage) {
-          const img = document.createElement("img");
+          let img = document.createElement("img");
           img.src = airline.logo;
           img.alt = airline.name + " Logo";
           img.classList.add("logo");
@@ -183,7 +185,7 @@ function updateCompareSection() {
 
           // AI helped to get the stuff inside recent performance array
         } else if (feature.key.includes(".")) {
-          const [main, sub] = feature.key.split(".");
+          let [main, sub] = feature.key.split(".");
           cell.textContent = airline[main] ? airline[main][sub] : "N/A";
           // grabs any exceptions
         } else {
@@ -193,6 +195,8 @@ function updateCompareSection() {
       } else {
         cell.textContent = "N/A";
       }
+      //Stop AI help
+
       // add the cell to the row
       row.appendChild(cell);
     });

@@ -13,6 +13,10 @@
   --fount-color: black;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 /*These are the styles for the nav*/
 nav {
   width: 100%;
@@ -286,7 +290,6 @@ footer p {
 } */
 
 
-/* GRID STYLES END */
 
 .selected {
   outline: 3px solid blue;
@@ -302,6 +305,21 @@ footer p {
 
 .shake {
   animation: shake 0.3s; /* how long the shake lasts */
+}
+
+/* GRID STYLES END  */
+
+/* TABLE STYLES BEGIN */
+#compare-section {
+  margin-top: 20px;
+  width: 90%;
+  
+}
+
+.compare-container{
+  display: grid;
+  place-items: center;
+  display: none;
 }
 
 .table {
@@ -321,13 +339,4 @@ footer p {
   height: auto;
 }
 
-#compare-section {
-  margin-top: 20px;
-  width: 90%;
-  
-}
-
-.compare-container{
-  display: grid;
-  place-items: center;
-}
+/* TABLE STYLES END */
