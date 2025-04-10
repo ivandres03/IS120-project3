@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
 :root {
   --main-color: #1f80ff;
   --secondary-color: #2252cd;
@@ -36,11 +41,15 @@ nav {
   cursor: pointer;
   padding: 1rem 1.5rem;
   font-size: 1rem;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
 .home-Btn:hover {
   background-color: #ff9500;
-  border-radius: 10px;
 }
 
 .airlines-Btn {
@@ -51,10 +60,19 @@ nav {
   cursor: pointer;
   padding: 1rem 1rem;
   font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
 }
 
 .airlines-Btn:hover {
   background-color: var(--secondary-color);
+}
+
+
+.home-Btn:active,
+.airlines-Btn:active {
+  transform: scale(0.95);
 }
 
 /*These are the styles for the light-blue section with the big logo*/
@@ -139,14 +157,24 @@ p {
   color: var(--background-color);
 }
 
-.divider button {
+.divider a {
   background-color: var(--background-color);
   border: none;
   cursor: pointer;
   padding: 1rem 1.5rem;
   font-size: 1rem;
   border-radius: 10px;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--footer-color);
+  display: inline-block;
+  text-align: center;
 }
+.divider a:active{
+  transform: scale(0.95);
+}
+
 
 /*Styles for footer*/
 footer {
@@ -162,6 +190,39 @@ footer p {
   color: var(--background-color);
 }
 
+
+
+
+/* Banner styles */
+#banner{
+  background-color: var(--main-color);
+  position: relative;
+  padding: 1rem 0;
+  width: 100%;
+}
+.banner-content {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#banner h1{
+  color: var(--background-color);
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+#banner h3{
+  color: var(--background-color);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+
+/* GRID STYLES START */
 #Compare-section {
   display: none;
 }
@@ -174,24 +235,42 @@ footer p {
 #flights-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  width: 95%;
+  gap: 0.75rem;
+  width: 85%;
 }
 
 /* gridDiv */
 .airline-grid-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   min-height: 200px;
-  border: solid black 2px;
-  background-color: rgba(173, 216, 230, 0.2);
+  background-color: var(--third-color);
   border-radius: 10%;
+  padding: 5px;
 }
-/* STOPPED STYLING HERE */
-.airline-grid-item img {
+
+.airline-grid-item:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* gridDivImgContainer */
+.image-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  height: auto;
+  height: 50%
+}
+
+.airline-grid-item img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* gridDivHeader */
@@ -199,12 +278,12 @@ footer p {
   font-weight: 700;
   font-size: larger;
   padding: 0.2rem;
-}
-
-/* gridDivImgContainer */
-.image-container {
+  margin-bottom: 10px;;
 }
 
 /* gridDivSubtitle & gridDivPtag */
 .grid-text {
 }
+
+
+/* GRID STYLES END */

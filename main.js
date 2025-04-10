@@ -24,7 +24,7 @@ function taskOne(dataObject){
         gridDivHeader.innerHTML = `Name: ${airline.name}`;
         gridDivImage.src = airline.logo;
         gridDivSubtitle.innerHTML = `HQ: ${airline.headquarters}`
-        gridDivPtag.innerHTML = `Routes: ${Object.keys(airline['routes']).length}`;
+        gridDivPtag.innerHTML = `Desitinations: ${airline.destinations}`;
 
         //add styles
         gridDiv.classList.add('airline-grid-item');
