@@ -105,7 +105,7 @@ function taskTwo() {
   }
 }
 
-// your taskOne code
+
 function updateCompareSection() {
   const compareSection = document.getElementById("compare-section");
   compareSection.innerHTML = ""; // Clear previous comparison content
@@ -136,7 +136,7 @@ function updateCompareSection() {
 
   const tbody = document.createElement("tbody");
 
-  // Define all features you want to show
+  // This came from AI helping me be more efficient
   const features = [
     { label: "Logo", key: "logo", isImage: true },
     { label: "Country", key: "country" },
@@ -158,17 +158,21 @@ function updateCompareSection() {
     },
   ];
 
+  // create airline rows for each feature
   features.forEach((feature) => {
     const row = document.createElement("tr");
 
+    // add label in each cell of row
     const featureCell = document.createElement("td");
     featureCell.textContent = feature.label;
     row.appendChild(featureCell);
 
+    // find data for each row 
     selectedAirlines.forEach((name) => {
-      const airline = allAirlinesData.find((a) => a.name === name); // 🔥 find full airline data
+      const airline = allAirlinesData.find((a) => a.name === name); 
       const cell = document.createElement("td");
 
+      // AI Helped to adjust for if it was an image
       if (airline) {
         if (feature.isImage) {
           const img = document.createElement("img");
@@ -176,22 +180,27 @@ function updateCompareSection() {
           img.alt = airline.name + " Logo";
           img.classList.add("logo");
           cell.appendChild(img);
+
+          // AI helped to get the stuff inside recent performance array
         } else if (feature.key.includes(".")) {
           const [main, sub] = feature.key.split(".");
           cell.textContent = airline[main] ? airline[main][sub] : "N/A";
+          // grabs any exceptions
         } else {
           cell.textContent = airline[feature.key] ?? "N/A";
         }
+        // grabs exceptions outside the nested loop
       } else {
         cell.textContent = "N/A";
       }
-
+      // add the cell to the row
       row.appendChild(cell);
     });
-
+    // add the row to the table
     tbody.appendChild(row);
   });
-
+  // add the table body to the table
   table.appendChild(tbody);
+  // Add the table to the section
   compareSection.appendChild(table);
 }

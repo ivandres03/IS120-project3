@@ -323,4 +323,11 @@ footer p {
 
 #compare-section {
   margin-top: 20px;
+  width: 90%;
+  
+}
+
+.compare-container{
+  display: grid;
+  place-items: center;
 }
