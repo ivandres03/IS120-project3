@@ -303,3 +303,24 @@ footer p {
 .shake {
   animation: shake 0.3s; /* how long the shake lasts */
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+#compare-section {
+  margin-top: 20px;
+}

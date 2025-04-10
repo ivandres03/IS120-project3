@@ -1,6 +1,12 @@
+let allAirlinesData = [];
+// Moved to top
+let selectedDivs = [];
+let selectedAirlines = [];     
+
 fetch("https://flights.is120.ckearl.com")
   .then((response) => response.json())
   .then((dataObject) => {
+    allAirlinesData = dataObject["data"]["airlines"]; 
     completeSteps(dataObject["data"]);
   });
 
@@ -50,11 +56,10 @@ function taskOne(dataObject) {
   }
 }
 
-
 function taskTwo() {
   // Arrays to store selected divs and names
-  let selectedDivs = [];
-  let selectedAirlines = [];
+  selectedDivs = [];
+  selectedAirlines = [];
 
   // Find all airline grid items
   let allGridItems = document.querySelectorAll(".airline-grid-item");
@@ -77,16 +82,12 @@ function taskTwo() {
       selectedDivs = selectedDivs.filter((item) => item !== div);
       selectedAirlines = selectedAirlines.filter((n) => n !== name);
       // stop AI help
-
     } else {
       // select up to three
       if (selectedDivs.length < 3) {
-
         div.classList.add("selected");
         selectedDivs.push(div);
         selectedAirlines.push(name);
-
-
       } else {
         // shake the div if more than three
         div.classList.add("shake");
@@ -94,11 +95,103 @@ function taskTwo() {
         // Remove the shake class after the animation finishes (so it can shake again next time) AI help here
         setTimeout(() => {
           div.classList.remove("shake");
-        }, 300); 
+        }, 300);
       }
     }
 
     // Log selected airline names
     console.log("Selected airline names:", selectedAirlines);
+    updateCompareSection();
   }
+}
+
+// your taskOne code
+function updateCompareSection() {
+  const compareSection = document.getElementById("compare-section");
+  compareSection.innerHTML = ""; // Clear previous comparison content
+
+  // If no airlines selected, hide the section
+  if (selectedAirlines.length === 0) {
+    compareSection.style.display = "none";
+    return;
+  } else {
+    compareSection.style.display = "block"; // show it
+  }
+
+  // Build the table dynamically
+  const table = document.createElement("table");
+  table.classList.add("table");
+
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  headRow.appendChild(document.createElement("th")); // Empty top-left corner
+
+  selectedAirlines.forEach((name) => {
+    const th = document.createElement("th");
+    th.textContent = name;
+    headRow.appendChild(th);
+  });
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+
+  // Define all features you want to show
+  const features = [
+    { label: "Logo", key: "logo", isImage: true },
+    { label: "Country", key: "country" },
+    { label: "Destinations", key: "destinations" },
+    { label: "Fleet Size", key: "fleet_size" },
+    { label: "Headquarters", key: "headquarters" },
+    {
+      label: "Avg Delay (Minutes)",
+      key: "recent_performance.average_delay_minutes",
+    },
+    { label: "Cancellation Rate", key: "recent_performance.cancellation_rate" },
+    {
+      label: "Customer Satisfaction",
+      key: "recent_performance.customer_satisfaction",
+    },
+    {
+      label: "On-Time Percentage",
+      key: "recent_performance.on_time_percentage",
+    },
+  ];
+
+  features.forEach((feature) => {
+    const row = document.createElement("tr");
+
+    const featureCell = document.createElement("td");
+    featureCell.textContent = feature.label;
+    row.appendChild(featureCell);
+
+    selectedAirlines.forEach((name) => {
+      const airline = allAirlinesData.find((a) => a.name === name); // 🔥 find full airline data
+      const cell = document.createElement("td");
+
+      if (airline) {
+        if (feature.isImage) {
+          const img = document.createElement("img");
+          img.src = airline.logo;
+          img.alt = airline.name + " Logo";
+          img.classList.add("logo");
+          cell.appendChild(img);
+        } else if (feature.key.includes(".")) {
+          const [main, sub] = feature.key.split(".");
+          cell.textContent = airline[main] ? airline[main][sub] : "N/A";
+        } else {
+          cell.textContent = airline[feature.key] ?? "N/A";
+        }
+      } else {
+        cell.textContent = "N/A";
+      }
+
+      row.appendChild(cell);
+    });
+
+    tbody.appendChild(row);
+  });
+
+  table.appendChild(tbody);
+  compareSection.appendChild(table);
 }
