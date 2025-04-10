@@ -281,9 +281,25 @@ footer p {
   margin-bottom: 10px;;
 }
 
-/* gridDivSubtitle & gridDivPtag */
-.grid-text {
-}
+/* gridDivSubtitle & gridDivPtag 
+ .grid-text {
+} */
 
 
 /* GRID STYLES END */
+
+.selected {
+  outline: 3px solid blue;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s; /* how long the shake lasts */
+}
