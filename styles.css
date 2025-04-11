@@ -4,13 +4,15 @@
 }
 
 :root {
+  /* https://coolors.co/256aef-ffffff-e5effb-111827-1f2937
+  we used coolors to get our colors */
   --main-color: #1f80ff;
-  --secondary-color: #2252cd;
-  --third-color: #e3eeff;
+  --secondary-color: ##256AEF;
+  --third-color: #e5effb;
   --light-gray: #717171;
-  --background-color: #ffff;
-  --footer-color: #1c2c34;
-  --fount-color: black;
+  --background-color: #FFFFFF;
+  --footer-color: #1F2937;
+  --font-color: #111827;
 }
 
 body{

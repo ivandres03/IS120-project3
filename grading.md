@@ -23,28 +23,41 @@ The key to maximizing wow factor points is **creativity and vision** for the sit
 
 ## Required Tasks (up to 30 points)
 
-- **[10 pts]** Contributing as a team member equally to the project
-- **[8 pts]** Much of the website’s content is dynamically generated via the API
-- **[8 pts]** Much of the styles applied to the page are dynamically applied conditionally according to the data retrieved from the API
+✅ **[10 pts]** Contributing as a team member equally to the project
+✅ **[8 pts]** Much of the website’s content is dynamically generated via the API
+✅ **[8 pts]** Much of the styles applied to the page are dynamically applied conditionally according to the data retrieved from the API
 - **[3 pts]** Responsivity of the page for both mobile and desktop view
-- **[1 pt]** Regular commits, branching, and merging to a `.git` repository for both team members (**0.5 pts**) and deploying the site to GitHub Pages (**0.5 pts**)
+✅ **[1 pt]** Regular commits, branching, and merging to a `.git` repository for both team members (**0.5 pts**) and deploying the site to GitHub Pages (**0.5 pts**)
 
 ---
 
 ## Optional Tasks (up to 45 points)
 
-- **[10 pts]** Have multiple views for data (grid mode, table mode, etc.)
+- **[10 pts]** Have multiple views for data (grid mode, table mode, etc.) (ASK TOPH IF COUNTS)
 - **[10 pts]** Create a functioning search bar for API data results
 - **[10 pts]** Implement pagination for data results
-- **[9 pts]** Create custom, JavaScript event-triggered animations (**3 pts each, 9 max**)
-- **[8 pts]** Implement a "compare" feature that allows users to compare items
+- **[9 pts]** Create custom, JavaScript event-triggered animations (**3 pts each, 9 max**) ✅(NOAH)shake(3pts) Noah another animation(3pts)
+✅ **[8 pts]** Implement a "compare" feature that allows users to compare items (NOAH) 
 - **[6 pts]** Implement some data persistence for revisiting users via `localStorage`  
   (e.g., recently viewed airlines, recently viewed teams, color scheme preferences)
-- **[6 pts]** Custom, interactive features (dropdowns, modals, accordions, etc.) (**2 pts each, 6 max**)
+- **[6 pts]** Custom, interactive features (dropdowns, modals, accordions, etc.) (**2 pts each, 6 max**) (Noah)Modal
 - **[6 pts]** Put in a loading animation as the API request waits for the data
-- **[5 pts]** Implement parallax scrolling
-- **[4 pts]** Create a dark mode toggle using JavaScript
-- **[4 pts]** Implement responsive images that load different sizes based on viewport sizes
-- **[4 pts]** Add custom audio feedback or sounds for certain user interactions
+- **[5 pts]** Implement parallax scrolling (IVAN)
+- **[4 pts]** Create a dark mode toggle using JavaScript(IVAN)
+- **[4 pts]** Implement responsive images that load different sizes based on viewport sizes(IVAN)
+- **[4 pts]** Add custom audio feedback or sounds for certain user interactions (IVAN)
 
 > Other optional tasks may be brought in from previous projects for **1 pt each** with a written description of those tasks.
+
+✅ Noah- Coolors (1pt) UTD
+Noah - HTML form in modal (1pt)
+Noah - video (1pt)
+noah - hover effects (1pt) 
+noah - include 3 tooltips (1pt)
+✅noah - object fit 
+noah - unsplash image (1pt) UTD
+noah - gradient (1pt) UTD 21
+noah - meta viewport tag (1pt UTD) 22
+
+
+IVAN - Variables (1pt)

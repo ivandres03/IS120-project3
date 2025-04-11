@@ -50,6 +50,7 @@ function taskOne(dataObject) {
     // append div to grid
     let containerDiv = document.getElementById("flights-grid");
     containerDiv.appendChild(gridDiv);
+    
 
   }
 }
