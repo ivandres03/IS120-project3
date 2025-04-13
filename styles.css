@@ -7,12 +7,13 @@
   /* https://coolors.co/256aef-ffffff-e5effb-111827-1f2937
   we used coolors to get our colors */
   --main-color: #1f80ff;
-  --secondary-color: ##256AEF;
+  --secondary-color: #256AEF;
   --third-color: #e5effb;
   --light-gray: #717171;
   --background-color: #FFFFFF;
   --footer-color: #1F2937;
   --font-color: #111827;
+  --small-margin: 1rem;
 }
 
 body{
@@ -22,23 +23,29 @@ body{
 /*These are the styles for the nav*/
 nav {
   width: 100%;
-  height: 45px;
+  height: 55px;
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   color: var(--main-color);
   padding: 0.3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+    
 }
 
 .nav-logo {
   font-weight: bold;
   font-size: 2rem;
+  margin-left: 3rem;
 }
 
 .nav-buttons {
   margin-left: auto;
   display: flex;
   margin-right: 15vw;
+  margin-top: 0.1rem;
 }
 
 .home-Btn {
@@ -86,11 +93,32 @@ nav {
 main {
   background-color: var(--third-color);
   display: flex;
+  align-items: center;
 }
 
 .title {
   width: 50%;
   padding: 2rem;
+  margin: 4rem 4rem 4rem 4rem;
+}
+
+.title h1{
+    font-size: 3.5rem;
+    margin: var(--small-margin);
+}
+
+.title h1:nth-of-type(2) {
+    color: var(--main-color);
+}
+
+
+.title h2{
+    font-size: 2rem;
+    margin: var(--small-margin);
+}
+
+.title a{
+    margin: var(--small-margin);
 }
 
 p {
@@ -128,6 +156,21 @@ p {
   align-items: center;
 }
 
+.boxes-title{
+    justify-items: center;
+    margin-top: 2rem;
+    
+}
+
+.boxes-title h2{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.boxes-title p{
+    font-size: 1.5rem;
+}
+
 .boxes {
   display: flex;
   flex-direction: row;
@@ -139,7 +182,8 @@ p {
   border-radius: 10px;
   justify-items: center;
   padding: 1rem;
-  margin: 1rem;
+  margin: var(--small-margin);
+  padding: 2rem;
 }
 
 .box div {
@@ -147,6 +191,18 @@ p {
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--small-margin);
+}
+
+#box-plane, #box-globe, #box-family{
+    color: var(--background-color);
+}
+
+.box h2{
+    margin: var(--small-margin);
 }
 
 /*this is the section before the footer*/
@@ -156,7 +212,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .divider p {
@@ -168,7 +224,7 @@ p {
   border: none;
   cursor: pointer;
   padding: 1rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 10px;
   text-decoration: none;
   font-family: inherit;
@@ -181,22 +237,72 @@ p {
   transform: scale(0.95);
 }
 
+.divider h1, p, a{
+    margin: var(--small-margin);
+}
+
+.divider h1{
+    font-size: 2rem;
+}
+
+.divider p{
+    font-size: 1.5rem;
+}
 
 /*Styles for footer*/
 footer {
-  background-color: var(--footer-color);
-  color: var(--background-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-}
-
-footer p {
-  color: var(--background-color);
-}
-
-
+    background-color: var(--footer-color);
+    color: var(--background-color);
+    padding: 1.5rem 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-left h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .footer-left p {
+    margin: 0.3rem 0 0;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-right a {
+    color: var(--background-color);
+    text-decoration: none;
+  }
+  
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+  
+  footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+  
 
 
 /* Banner styles */
@@ -342,3 +448,15 @@ footer p {
 }
 
 /* TABLE STYLES END */
+
+
+
+
+
+/* Responsive design*/
+
+@media (width<800px){
+    main {
+        flex-direction: column;
+      }
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SkyVoyage</title>
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/981336eb75.js"
@@ -25,13 +25,12 @@
       <div class="title">
         <h1>Find Your Perfect</h1>
         <h1>Flight</h1>
-        <h3>
-          Compare airlines, amenities, and routes with ease. Make informed
+        <h2>
+          Compare airlines. Make informed
           decisions for your next journey.
-        </h3>
+        </h2>
 
-        <a href="./flights.html" class="airlines-Btn">Compare Airlines</a
-        >
+        <a href="./flights.html" class="airlines-Btn">Compare Airlines</a>
 
         <p>Trusted by thousands of travelers worldwide</p>
       </div>
@@ -42,15 +41,18 @@
     </main>
 
     <section class="boxes-section">
-      <h2>Why Choose SkyVoyage</h2>
-      <p>
-        Compare and find the perfect airline for your next adventure with our
-        comprehensive tools
-      </p>
+        <div class="boxes-title">
+            <h2>Why Choose SkyVoyage</h2>
+            <p>
+              Compare and find the perfect airline for your next adventure with our
+              comprehensive tools
+            </p>
+        </div>
+      
 
       <div class="boxes">
         <div class="box">
-          <div>(plane img)</div>
+          <div> <i id="box-plane" class="fa-solid fa-plane "></i></div>
           <h2>Compare Airlines</h2>
           <p>
             Side-by-side comparison of amenities, routes, and services across
@@ -59,22 +61,20 @@
         </div>
 
         <div class="box">
-          <div>(star img)</div>
-          <h2>Find Best Amenities</h2>
-          <p>
-            Detailed information about in-flight services, seat comfort, and
-            entertainment options
-          </p>
-        </div>
+            <div><i id="box-globe" class="fa-solid fa-globe"></i></div>
+            <h2>Best Airlines</h2>
+            <p>
+              We provide details about the world's top airlines, so you can make the best decision for your journey.
+            </p>
+          </div>
 
-        <div class="box">
-          <div>(plane img)</div>
-          <h2>Explore Routes</h2>
-          <p>
-            Discover which airlines fly to your desired destinations and how
-            frequently
-          </p>
-        </div>
+          <div class="box">
+            <div><i id="box-family" class="fa-solid fa-people-group"></i></div>
+            <h2>Family-Friendly Options</h2>
+            <p>
+              Find airlines with top-rated comfort, entertainment, and customer service for a smoother family trip.
+            </p>
+          </div>
       </div>
     </section>
 
@@ -88,12 +88,21 @@
     </section>
 
     <footer>
-      <h2>SkyVoyage</h2>
-      <p>Compare airlines with ease</p>
-      <p>About</p>
-      <p>Contact</p>
-      <p>Privacy Policy</p>
-    </footer>
+        <div class="footer-top">
+          <div class="footer-left">
+            <h2><i class="fa-solid fa-plane-departure"></i> SkyVoyage</h2>
+            <p>Compare airlines with ease</p>
+          </div>
+          <div class="footer-right">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+        <hr />
+        <p class="footer-bottom">© 2025 SkyVoyage. All rights reserved.</p>
+      </footer>
+      
 
     <script>
       src = "./main.js";
