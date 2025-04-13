@@ -44,8 +44,7 @@ nav {
 .nav-buttons {
   margin-left: auto;
   display: flex;
-  margin-right: 15vw;
-  margin-top: 0.1rem;
+  margin-right: 15vw; 
 }
 
 .home-Btn {
@@ -59,10 +58,12 @@ nav {
   display: inline-block;
   border-radius: 10px;
   transition: all 0.2s ease;
+  align-self: center;
 }
 
 .home-Btn:hover {
   background-color: #ff9500;
+  color: var(--background-color);
 }
 
 .airlines-Btn {
@@ -141,19 +142,81 @@ p {
   border-radius: 50%;
   height: 300px;
   width: 300px;
+  position: relative;
+  box-shadow: inset -10px -10px 30px rgba(255, 255, 255, 0.027),
+            inset 10px 10px 30px rgba(85, 85, 85, 0.233),
+            0 0 40px rgba(0, 0, 0, 0.4);
+    
 }
 
 #plane {
   font-size: 7rem;
   color: var(--main-color);
   transform: rotate(-45deg);
+  position: relative;
+
 }
 
-/**/
+#plane:hover{
+    color: var(--secondary-color);
+    
+}
+
+.fly {
+    animation: fly 3s ease-out;
+  }
+
+/*animation plane flying*/
+
+@keyframes fly {
+    0% {
+      transform: translate(0%, 0%) scale(1) rotate(-45deg);
+      z-index: 3;
+    }
+  
+    40% {
+      transform: translate(120%, -100%) scale(0.4) rotate(-45deg); 
+      z-index: 3;
+    }
+  
+    43% {
+        transform: translate(100%, -100%) scale(0.2) rotate(135deg); 
+        z-index: 1;
+        
+    }
+    45% {
+        transform: translate(100%, -100%) scale(0.2) rotate(135deg); 
+        z-index: -1;
+        
+    }
+    50% {
+        transform: translate(-75%, 100%) scale(0.2) rotate(135deg);
+        z-index: -1;
+    }
+    65% {
+        transform: translate(-100%, 150%) scale(0.2) rotate(135deg);
+        z-index: 1;
+    }
+    71% {
+        transform: translate(-100%, 150%) scale(0.4) rotate(-45deg); 
+        z-index: 1;
+    }
+    
+    100% {
+      transform: translate(0%, 0%) scale(1) rotate(-45deg); 
+      z-index: 3;
+    }
+  }
+  
+
+
+
+/*styles for second section of first page*/
 .boxes-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background-color);
 }
 
 .boxes-title{
@@ -284,8 +347,8 @@ footer {
   
   .footer-right a {
     color: var(--background-color);
-    text-decoration: none;
   }
+
   
   .footer-right a:hover {
     text-decoration: underline;
@@ -301,6 +364,19 @@ footer {
     text-align: center;
     font-size: 0.85rem;
     opacity: 0.7;
+  }
+  
+  .back-to-top {
+    position: relative;
+    left: 90vw;
+    bottom: 1rem;
+    color: var(--third-color);
+    font-size: 2rem;
+  }
+
+  
+  .back-to-top:hover {
+    color: var(--background-color);
   }
   
 
@@ -458,5 +534,15 @@ footer {
 @media (width<800px){
     main {
         flex-direction: column;
+      }
+      #flights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .home-Btn {
+        padding: 0.5rem;
+      }
+      
+      .airlines-Btn {
+        padding: 0.5rem;
       }
 }

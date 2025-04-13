@@ -209,3 +209,14 @@ function updateCompareSection() {
   // Add the table to the section
   compareSection.appendChild(table);
 }
+
+//AI used: to get the animation on the plane to work with every click
+const plane = document.getElementById("plane");
+
+plane.addEventListener("click", () => {
+  plane.classList.remove("fly");
+  void plane.offsetWidth;
+
+  plane.classList.add("fly");
+});
+

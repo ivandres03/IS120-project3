@@ -61,7 +61,7 @@ noah - meta viewport tag (1pt UTD) 22
 
 
 IVAN - Variables (1pt)
-animation in plane on click (1pt)
+✅ animation in plane on click (1pt)
 ✅sticky header (1pt)
-back to top button (1pt)
+✅ back to top button (1pt)
 animation to load second page (1pt) Wow factor!
