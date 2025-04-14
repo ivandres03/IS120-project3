@@ -43,8 +43,8 @@ The key to maximizing wow factor points is **creativity and vision** for the sit
 - **[6 pts]** Custom, interactive features (dropdowns, modals, accordions, etc.) (**2 pts each, 6 max**) (Noah)Modal
 - **[6 pts]** Put in a loading animation as the API request waits for the data
 - **[5 pts]** Implement parallax scrolling (IVAN)
-- **[4 pts]** Create a dark mode toggle using JavaScript(IVAN)
-- **[4 pts]** Implement responsive images that load different sizes based on viewport sizes(IVAN)
+✅- **[4 pts]** Create a dark mode toggle using JavaScript(IVAN)
+✅ - **[4 pts]** Implement responsive images that load different sizes based on viewport sizes(IVAN)
 - **[4 pts]** Add custom audio feedback or sounds for certain user interactions (IVAN)
 
 > Other optional tasks may be brought in from previous projects for **1 pt each** with a written description of those tasks.
