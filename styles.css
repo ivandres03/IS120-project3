@@ -14,7 +14,11 @@
   --darkMode-button: rgba(0, 0, 0, 0.158);
   --lightFont-color: #FFFFFF;
   --black-text:black;
+  --box-color: #e5effb;
   --small-margin: 1rem;
+  --logo-shadow: inset -10px -10px 30px rgba(255, 255, 255, 0.027),
+        inset 10px 10px 30px rgba(85, 85, 85, 0.233),
+        0 0 40px rgba(0, 0, 0, 0.4);
 }
  /*Darkmode Colors*/
 body.dark {
@@ -23,9 +27,13 @@ body.dark {
     --background-color: #1F2937;
     --footer-color: #1F2937;
     --font-color: #e5effb;
-    --darkMode-button: #ffffff5e;
+    --darkMode-button: #ffffff33;
     --lightFont-color: #e5effb;
     --black-text:#e5effb;
+    --box-color: #6e839c;
+    --logo-shadow: inset -10px -10px 30px rgba(53, 51, 51, 0.755),
+            inset 10px 10px 30px rgba(0, 0, 0, 0.715),
+            0 0 40px rgba(255, 255, 255, 0.105);;
   }
 
 
@@ -109,14 +117,21 @@ nav {
 /*Dark mode button*/
   button {
     background-color: var(--darkMode-button);
+    color: var(--black-text);
     border: none;
     border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
+    height: 30px;
+    width: 30px;
     font-size: 2rem;
     margin-right: 1rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  #dark-mode-logo{
+    font-size: 20px;
   }
 
 /*These are the styles for the light-blue section with the big logo*/
@@ -175,9 +190,9 @@ main {
   height: 300px;
   width: 300px;
   position: relative;
-  box-shadow: inset -10px -10px 30px rgba(255, 255, 255, 0.027),
-            inset 10px 10px 30px rgba(85, 85, 85, 0.233),
-            0 0 40px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--logo-shadow)
+
+
     
 }
 
@@ -187,11 +202,11 @@ main {
   transform: rotate(-45deg);
   position: relative;
 
+
 }
 
 #plane:hover{
-    color: var(--secondary-color);
-    
+    transform: rotate(-45deg) scale(1.1);
 }
 
 .fly {
@@ -405,7 +420,7 @@ footer {
   
   .back-to-top {
     position: relative;
-    left: 90vw;
+    left: 90%;
     bottom: 1rem;
     color: var(--second-color);
     font-size: 2rem;
@@ -433,14 +448,14 @@ footer {
 }
 
 #banner h1{
-  color: var(--background-color);
+  color: var(--lightFont-color);
   font-size: 2.5rem;
   margin-bottom: 12px;
   font-weight: bold;
 }
 
 #banner h3{
-  color: var(--background-color);
+  color: var(--lightFont-color);
   font-size: 1.1rem;
   line-height: 1.5;
   max-width: 600px;
@@ -455,6 +470,7 @@ footer {
 #airline-grid {
   display: flex;
   justify-content: center;
+  background-color: var(--background-color);
 }
 
 #flights-grid {
@@ -462,6 +478,8 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
   width: 85%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* gridDiv */
@@ -471,7 +489,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   min-height: 200px;
-  background-color: var(--second-color);
+  background-color: var(--box-color);
   border-radius: 10%;
   padding: 5px;
 }
@@ -534,13 +552,15 @@ footer {
 #compare-section {
   margin-top: 20px;
   width: 90%;
-  
 }
 
 .compare-container{
   display: grid;
   place-items: center;
   display: none;
+  background-color: var(--second-color);
+  color: var(--black-text);
+  padding: 1rem;
 }
 
 .table {
