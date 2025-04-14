@@ -220,3 +220,7 @@ plane.addEventListener("click", () => {
   plane.classList.add("fly");
 });
 
+//Code for Dark Mode Button 
+function toggle() {
+    document.body.classList.toggle("dark");
+  }

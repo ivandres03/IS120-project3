@@ -7,24 +7,41 @@
   /* https://coolors.co/256aef-ffffff-e5effb-111827-1f2937
   we used coolors to get our colors */
   --main-color: #1f80ff;
-  --secondary-color: #256AEF;
-  --third-color: #e5effb;
-  --light-gray: #717171;
+  --second-color: #e5effb;
   --background-color: #FFFFFF;
   --footer-color: #1F2937;
-  --font-color: #111827;
+  --font-color: #5c5e61;
+  --darkMode-button: rgba(0, 0, 0, 0.158);
+  --lightFont-color: #FFFFFF;
+  --black-text:black;
   --small-margin: 1rem;
 }
+ /*Darkmode Colors*/
+body.dark {
+    --main-color: #144688;
+    --second-color: #131920;
+    --background-color: #1F2937;
+    --footer-color: #1F2937;
+    --font-color: #e5effb;
+    --darkMode-button: #ffffff5e;
+    --lightFont-color: #e5effb;
+    --black-text:#e5effb;
+  }
+
 
 body{
   overflow-x: hidden;
 }
 
+p {
+    color: var(--font-color);
+  }
+
 /*These are the styles for the nav*/
 nav {
   width: 100%;
   height: 55px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background-color);
   display: flex;
   align-items: center;
   color: var(--main-color);
@@ -70,7 +87,7 @@ nav {
   background-color: var(--main-color);
   border: none;
   border-radius: 10px;
-  color: var(--background-color);
+  color: var(--lightFont-color);
   cursor: pointer;
   padding: 1rem 1rem;
   font-size: 1rem;
@@ -89,10 +106,23 @@ nav {
   transform: scale(0.95);
 }
 
+/*Dark mode button*/
+  button {
+    background-color: var(--darkMode-button);
+    border: none;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+
+  }
+
 /*These are the styles for the light-blue section with the big logo*/
 
 main {
-  background-color: var(--third-color);
+  background-color: var(--second-color);
   display: flex;
   align-items: center;
 }
@@ -108,6 +138,10 @@ main {
     margin: var(--small-margin);
 }
 
+.title h1:nth-of-type(1) {
+    color: var(--black-text);
+}
+
 .title h1:nth-of-type(2) {
     color: var(--main-color);
 }
@@ -116,15 +150,13 @@ main {
 .title h2{
     font-size: 2rem;
     margin: var(--small-margin);
+    color: var(--black-text);
 }
 
 .title a{
     margin: var(--small-margin);
 }
 
-p {
-  color: var(--light-gray);
-}
 
 .big-logo {
   width: 50%;
@@ -135,7 +167,7 @@ p {
 }
 
 .plane-bg {
-  background-color: var(--background-color);
+  background-color: var(--lightFont-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,7 +254,7 @@ p {
 .boxes-title{
     justify-items: center;
     margin-top: 2rem;
-    
+    color: var(--black-text);
 }
 
 .boxes-title h2{
@@ -238,10 +270,11 @@ p {
   display: flex;
   flex-direction: row;
   padding: 3rem;
+  color: var(--black-text);
 }
 
 .box {
-  background-color: var(--third-color);
+  background-color: var(--second-color);
   border-radius: 10px;
   justify-items: center;
   padding: 1rem;
@@ -271,7 +304,7 @@ p {
 /*this is the section before the footer*/
 .divider {
   background-color: var(--main-color);
-  color: var(--background-color);
+  color: var(--lightFont-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,7 +312,7 @@ p {
 }
 
 .divider p {
-  color: var(--background-color);
+  color: var(--lightFont-color);
 }
 
 .divider a {
@@ -310,6 +343,10 @@ p {
 
 .divider p{
     font-size: 1.5rem;
+}
+
+.divider a{
+    color: var(--black-text);
 }
 
 /*Styles for footer*/
@@ -346,7 +383,7 @@ footer {
   }
   
   .footer-right a {
-    color: var(--background-color);
+    color: var(--lightFont-color);
   }
 
   
@@ -356,7 +393,7 @@ footer {
   
   footer hr {
     border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--font-color);
     margin: 1rem 0;
   }
   
@@ -370,13 +407,13 @@ footer {
     position: relative;
     left: 90vw;
     bottom: 1rem;
-    color: var(--third-color);
+    color: var(--second-color);
     font-size: 2rem;
   }
 
   
   .back-to-top:hover {
-    color: var(--background-color);
+    color: var(--lightFont-color);
   }
   
 
@@ -434,7 +471,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   min-height: 200px;
-  background-color: var(--third-color);
+  background-color: var(--second-color);
   border-radius: 10%;
   padding: 5px;
 }

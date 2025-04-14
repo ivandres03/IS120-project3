@@ -61,3 +61,8 @@ noah - meta viewport tag (1pt UTD) 25
 
 
 IVAN - Variables (1pt)
+✅sticky header
+✅back to top button
+✅use of variables for css
+form
+loading effect to second page (wow factor)
