@@ -318,18 +318,19 @@ main {
   flex-direction: row;
   padding: 3rem;
   color: var(--black-text);
-  overflow: auto;
-  white-space: nowrap;
+  max-width: 80%; 
+  overflow-x: auto; 
+  gap: 1rem; 
 }
 
 .box {
   background-color: var(--second-color);
   border-radius: 10px;
   justify-items: center;
-  padding: 1rem;
-  margin: var(--small-margin);
   padding: 2rem;
-  min-width: 250px;
+  margin: var(--small-margin);
+  min-width: 250px; 
+  flex: 0 0 auto; 
 }
 
 .box div {
