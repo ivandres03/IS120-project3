@@ -14,6 +14,8 @@ function completeSteps(dataObject) {
   console.log(dataObject);
   taskOne(dataObject); // still shows all the airlines
   taskTwo(); // NEW: activates the selecting behavior
+
+  setupSearchBar();
 }
 
 function taskOne(dataObject) {
@@ -210,7 +212,7 @@ function updateCompareSection() {
   compareSection.appendChild(table);
 }
 
-//AI used: to get the animation on the plane to work with every click
+//Animation on the plane to work with every click
 const plane = document.getElementById("plane");
 
 plane.addEventListener("click", () => {
@@ -232,4 +234,35 @@ plane.addEventListener("click", () => {
       icon.classList.add("fa-moon");
     }
   }
+  
+//Search Bar 
+function setupSearchBar() {
+    const searchInput = document.getElementById("search-bar");
+  
+    searchInput.addEventListener("input", function (event) {
+// Save the text that I wrote in tehe search bar, AI help to lear how to put it in lower case
+      const searchTerm = event.target.value.toLowerCase();
+      const allAirlines = document.querySelectorAll(".airline-grid-item");
+  
+// goes trhough the ailines list 
+      for (let i = 0; i < allAirlines.length; i++) {
+        const div = allAirlines[i];
+  
+//search ariline name
+        const header = div.querySelector(".grid-header");
+  
+        // Ai help: to clan the name, make it lowercase so it works however you write it
+        const fullText = header.textContent;
+        const cleanName = fullText.replace("Name: ", "").toLowerCase();
+  
+        // this will just show what I looked for in the search bar
+        if (cleanName.includes(searchTerm)) {
+          div.style.display = "flex"; 
+        } else {
+          div.style.display = "none"; 
+        }
+      }
+    });
+  }
+  
   

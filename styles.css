@@ -19,6 +19,7 @@
   --logo-shadow: inset -10px -10px 30px rgba(255, 255, 255, 0.027),
         inset 10px 10px 30px rgba(85, 85, 85, 0.233),
         0 0 40px rgba(0, 0, 0, 0.4);
+  --searBar-shadow:0 4px 8px rgba(60, 60, 60, 0.23)
 }
  /*Darkmode Colors*/
 body.dark {
@@ -34,7 +35,9 @@ body.dark {
     --logo-shadow: inset -10px -10px 30px rgba(53, 51, 51, 0.755),
             inset 10px 10px 30px rgba(0, 0, 0, 0.715),
             0 0 40px rgba(255, 255, 255, 0.105);;
+    --searBar-shadow:0 4px 8px rgba(110, 110, 110, 0.489);
   }
+
 
 
 body{
@@ -192,8 +195,6 @@ main {
   position: relative;
   box-shadow: var(--logo-shadow)
 
-
-    
 }
 
 #plane {
@@ -461,7 +462,25 @@ footer {
   max-width: 600px;
 }
 
+/*Search Bar styles*/
 
+.search-bar-section{
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+}
+
+#search-bar{
+    justify-content: center;
+    height: 2rem;
+    width: 400px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: var(--searBar-shadow);
+}
+
+  
 /* GRID STYLES START */
 #Compare-section {
   display: none;

@@ -34,7 +34,7 @@ The key to maximizing wow factor points is **creativity and vision** for the sit
 ## Optional Tasks (up to 45 points)
 
 - **[10 pts]** Have multiple views for data (grid mode, table mode, etc.) (ASK TOPH IF COUNTS)
-- **[10 pts]** Create a functioning search bar for API data results
+✅ - **[10 pts]** Create a functioning search bar for API data results
 - **[10 pts]** Implement pagination for data results
 - **[9 pts]** Create custom, JavaScript event-triggered animations (**3 pts each, 9 max**) ✅(NOAH)shake(3pts) Noah another animation(3pts)
 ✅ **[8 pts]** Implement a "compare" feature that allows users to compare items (NOAH) 
