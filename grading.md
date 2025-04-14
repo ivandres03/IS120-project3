@@ -57,11 +57,7 @@ noah - include 3 tooltips (1pt)
 ✅noah - object fit 
 noah - unsplash image (1pt) UTD
 noah - gradient (1pt) UTD 21
-noah - meta viewport tag (1pt UTD) 22
+noah - meta viewport tag (1pt UTD) 25
 
 
 IVAN - Variables (1pt)
-✅ animation in plane on click (1pt)
-✅sticky header (1pt)
-✅ back to top button (1pt)
-animation to load second page (1pt) Wow factor!
