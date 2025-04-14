@@ -265,4 +265,48 @@ function setupSearchBar() {
     });
   }
   
+
+  /*Form */ 
+  function toggleForm() {
+    const container = document.querySelector('.subscription-form');
+  
+    if (document.getElementById('flightForm')) return;
+  
+    const form = document.createElement('form');
+    form.id = 'flightForm';
+  
+    const fields = [
+      { type: 'text', placeholder: 'Name' },
+      { type: 'email', placeholder: 'Email' },
+      { type: 'text', placeholder: 'Destiny of interest' }
+    ];
+  
+    const inputs = []; 
+  
+    //help of AI to know how to set the inputs just with one forEach function to amke it faster
+    fields.forEach(f => {
+      const input = document.createElement('input');
+      input.type = f.type;
+      input.placeholder = f.placeholder;
+      inputs.push(input);
+      form.appendChild(input);
+    });
+  
+    const submit = document.createElement('button');
+    submit.type = 'submit';
+    submit.textContent = 'Submit';
+    submit.id = 'submit-form-button';
+    form.appendChild(submit);
+  
+    form.addEventListener('submit', function (cleanName) {
+      cleanName.preventDefault(); 
+  
+      // This resets the form after click in the submit button
+      inputs.forEach(input => input.value = '');
+    });
+  
+    container.appendChild(form);
+  }
+  
+
   

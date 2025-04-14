@@ -64,5 +64,5 @@ IVAN - Variables (1pt)
 ✅sticky header
 ✅back to top button
 ✅use of variables for css
-form
+✅form
 loading effect to second page (wow factor)

@@ -108,7 +108,8 @@ nav {
 }
 
 .airlines-Btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--font-color);
+  color: var(--second-color);
 }
 
 
@@ -363,6 +364,49 @@ main {
 
 .divider a{
     color: var(--black-text);
+}
+
+/*form styles*/
+.form-button{
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--black-text);
+    padding: 1.5rem;
+    height: 2rem;
+    width: 5rem;
+    
+}
+
+.form-button:hover, .divider a:hover {
+    background-color: var(--font-color);
+    color: var(--second-color);
+  }
+.subscription-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.subscription-form input {
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    height: 2rem;
+    margin: 5px 0;
+    display: block;
+    padding-left: 1rem;
+  }
+
+#submit-form-button{
+    width: 80px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: var(--second-color);
 }
 
 /*Styles for footer*/
