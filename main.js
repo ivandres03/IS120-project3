@@ -3,7 +3,8 @@ let allAirlinesData = [];
 let selectedDivs = [];
 let selectedAirlines = [];     
 
-fetch("https://flights.is120.ckearl.com")
+// fetch("https://flights.is120.ckearl.com")
+fetch("./test.json")
   .then((response) => response.json())
   .then((dataObject) => {
     allAirlinesData = dataObject["data"]["airlines"]; 
@@ -208,9 +209,11 @@ function updateCompareSection() {
   });
   // add the table body to the table
   table.appendChild(tbody);
-  // Add the table to the section
+// “Add the table to the section
   compareSection.appendChild(table);
 }
+
+
 
 //Animation on the plane to work with every click
 const plane = document.getElementById("plane");
@@ -221,6 +224,7 @@ plane.addEventListener("click", () => {
 
   plane.classList.add("fly");
 });
+
 
 //Code for Dark Mode Button   
   function toggle() {

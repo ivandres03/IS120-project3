@@ -20,8 +20,8 @@ The key to maximizing wow factor points is **creativity and vision** for the sit
 ---
 
 # Task Breakdown
-
-## Required Tasks (up to 30 points)
+wow factor 20 / 30
+## Required Tasks (up to 30 points) 27/30
 
 ✅ **[10 pts]** Contributing as a team member equally to the project
 ✅ **[8 pts]** Much of the website’s content is dynamically generated via the API
@@ -31,7 +31,7 @@ The key to maximizing wow factor points is **creativity and vision** for the sit
 
 ---
 
-## Optional Tasks (up to 45 points)
+## Optional Tasks (up to 45 points) 40 / 45
 
 - **[10 pts]** Have multiple views for data (grid mode, table mode, etc.) (ASK TOPH IF COUNTS)
 ✅ - **[10 pts]** Create a functioning search bar for API data results
@@ -42,7 +42,7 @@ The key to maximizing wow factor points is **creativity and vision** for the sit
   (e.g., recently viewed airlines, recently viewed teams, color scheme preferences)
 - **[6 pts]** Custom, interactive features (dropdowns, modals, accordions, etc.) (**2 pts each, 6 max**) (Noah)Modal
 - **[6 pts]** Put in a loading animation as the API request waits for the data
-- **[5 pts]** Implement parallax scrolling (IVAN)
+✅ **[5 pts]** Implement parallax scrolling (IVAN)
 ✅- **[4 pts]** Create a dark mode toggle using JavaScript(IVAN)
 ✅ - **[4 pts]** Implement responsive images that load different sizes based on viewport sizes(IVAN)
 - **[4 pts]** Add custom audio feedback or sounds for certain user interactions (IVAN)
@@ -57,7 +57,7 @@ noah - include 3 tooltips (1pt)
 ✅noah - object fit 
 noah - unsplash image (1pt) UTD
 noah - gradient (1pt) UTD 21
-noah - meta viewport tag (1pt UTD) 25
+✅noah - meta viewport tag (1pt UTD) 25
 
 
 IVAN - Variables (1pt)
@@ -66,3 +66,6 @@ IVAN - Variables (1pt)
 ✅use of variables for css
 ✅form
 loading effect to second page (wow factor)
+
+
+overflow scroll

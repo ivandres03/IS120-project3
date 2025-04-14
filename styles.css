@@ -6,7 +6,7 @@
 :root {
   /* https://coolors.co/256aef-ffffff-e5effb-111827-1f2937
   we used coolors to get our colors */
-  --main-color: #1f80ff;
+  --main-color: #144688;
   --second-color: #e5effb;
   --background-color: #FFFFFF;
   --footer-color: #1F2937;
@@ -19,11 +19,13 @@
   --logo-shadow: inset -10px -10px 30px rgba(255, 255, 255, 0.027),
         inset 10px 10px 30px rgba(85, 85, 85, 0.233),
         0 0 40px rgba(0, 0, 0, 0.4);
-  --searBar-shadow:0 4px 8px rgba(60, 60, 60, 0.23)
+  --searBar-shadow:0 4px 8px rgba(60, 60, 60, 0.23);
+  --parallax-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
+
  /*Darkmode Colors*/
 body.dark {
-    --main-color: #144688;
+    --main-color: #1f80ff;;
     --second-color: #131920;
     --background-color: #1F2937;
     --footer-color: #1F2937;
@@ -36,12 +38,13 @@ body.dark {
             inset 10px 10px 30px rgba(0, 0, 0, 0.715),
             0 0 40px rgba(255, 255, 255, 0.105);;
     --searBar-shadow:0 4px 8px rgba(110, 110, 110, 0.489);
+    --parallax-image: url("https://images.unsplash.com/photo-1476504825079-f50520ac761d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG5pZ2h0JTIwc2t5fGVufDB8fDB8fHww")
   }
 
 
 
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 p {
@@ -144,12 +147,21 @@ main {
   background-color: var(--second-color);
   display: flex;
   align-items: center;
+
+  /* Parralax */
+  background-image: var(--parallax-image);
+  min-height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
   width: 50%;
   padding: 2rem;
   margin: 4rem 4rem 4rem 4rem;
+
 }
 
 .title h1{
@@ -216,7 +228,7 @@ main {
   }
 
 /*animation plane flying*/
-
+/*
 @keyframes fly {
     0% {
       transform: translate(0%, 0%) scale(1) rotate(-45deg);
@@ -255,8 +267,25 @@ main {
       transform: translate(0%, 0%) scale(1) rotate(-45deg); 
       z-index: 3;
     }
-  }
+  }*/
   
+@keyframes fly{
+  0% {
+    transform: translate(0%, 0%) scale(1) rotate(-45deg);
+  }
+  25% {
+    transform: translate(200%, -100%) scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: translate(-200%, 100%) scale(1) rotate(-45deg);
+  }
+  75% {
+    transform: translate(0%, 0%) scale(1) rotate(-45deg);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1) rotate(-45deg);
+  }
+}
 
 
 
@@ -266,6 +295,7 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: var(--background-color);
+  overflow-x: hidden !important
 }
 
 .boxes-title{
@@ -288,6 +318,8 @@ main {
   flex-direction: row;
   padding: 3rem;
   color: var(--black-text);
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .box {
@@ -297,6 +329,7 @@ main {
   padding: 1rem;
   margin: var(--small-margin);
   padding: 2rem;
+  min-width: 250px;
 }
 
 .box div {
@@ -377,7 +410,7 @@ main {
     color: var(--black-text);
     padding: 1.5rem;
     height: 2rem;
-    width: 5rem;
+    width: auto;
     
 }
 
