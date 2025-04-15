@@ -228,7 +228,6 @@ main {
   }
 
 /*animation plane flying*/
-/*
 @keyframes fly {
     0% {
       transform: translate(0%, 0%) scale(1) rotate(-45deg);
@@ -267,23 +266,38 @@ main {
       transform: translate(0%, 0%) scale(1) rotate(-45deg); 
       z-index: 3;
     }
-  }*/
+  }
   
-@keyframes fly{
+
+/*Flying out of page animation*/
+.fly-animation {
+  animation: fly-out-page 3s ease-in-out forwards;
+}
+
+@keyframes fly-out-page{
   0% {
     transform: translate(0%, 0%) scale(1) rotate(-45deg);
   }
   25% {
     transform: translate(200%, -100%) scale(1) rotate(-45deg);
   }
-  50% {
-    transform: translate(-200%, 100%) scale(1) rotate(-45deg);
+  26%{
+    transform: translate(200%, -100%) scale(1) rotate(165deg);
   }
-  75% {
-    transform: translate(0%, 0%) scale(1) rotate(-45deg);
+  50% {
+    transform: translate(-100vw, 100%) scale(0.5) rotate(165deg);
+  }
+  51% {
+    transform: translate(-100vw, 100%) scale(0.5) rotate(270deg);
+  }
+  62% {
+    transform: translate(-100vw, -200%) scale(0.5) rotate(0deg);
+  }
+  63% {
+    transform: translate(-100w, -200%) scale(0.5) rotate(0deg);
   }
   100% {
-    transform: translate(0%, 0%) scale(1) rotate(-45deg);
+    transform: translate(100vw, 0%) scale(1) rotate(0deg);
   }
 }
 

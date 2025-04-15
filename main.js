@@ -312,5 +312,19 @@ function setupSearchBar() {
     container.appendChild(form);
   }
   
+// plane flying out of the page
+
+  document.getElementById("compareBtn").addEventListener("click", function (e) {
+    e.preventDefault(); 
+
+    const plane = document.getElementById("plane");
+    plane.classList.add("fly-animation");
+
+    // Wait 3 seconds so the plane can fky first
+    setTimeout(function () {
+      window.location.href = "./flights.html";
+    }, 2500);
+  });
+
 
   
